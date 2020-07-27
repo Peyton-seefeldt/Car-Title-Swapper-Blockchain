@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet" integrity="sha384-9NlqO4dP5KfioUGS568UFwM3lbWf3Uj3Qb7FBHuIuhLoDp3ZgAqPE1/MYLEBPZYM" crossorigin="anonymous">
+        <title>Exchange</title>
+        <style>
+          body {
+            background-color: #e8fff9
+          }
+        </style>
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <a class="navbar-brand" href="http://127.0.0.1:3000/">Car Swap</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                          <a class="nav-link" href="/exchange">Exchange</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/search">Your Transactions</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+        <h3>The form below will alow you to send the title of a vehicle you own to someone else</h3>
+
+
+        <br/>
+    <div>
+    <form name="myForm" action='/posttransaction' method="post">
+        <form>
+                <fieldset>
+                  <div class="form-group">
+                    <legend>Security and Identity:</legend>
+                    <input class="form-control" name="SSnum" aria-describedby="emailHelp" placeholder="Enter Social Security #">
+                    <small id="emailHelp" class="form-text text-muted">Your Social Security # is never shown to anyone.</small>
+                  </div>
+                  <div class="form-group">
+                    <legend>Vehicle Information:</legend>
+                    <input class="form-control" name="make" placeholder="Vehicle Make">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" name="model" placeholder="Vehicle Model">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" name="year" placeholder="Year">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" name="odometer" placeholder="Odometer Reading">
+                  </div>
+                  <div class="form-group">
+                    <legend>Transaction Information:</legend>
+                    <input class="form-control" name="Sname" placeholder="Your Name">
+                    <small id="emailHelp" class="form-text text-muted">Please enter your First and Last Name.</small>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" name="Rname" placeholder="Recipiants Name">
+                    <small id="emailHelp" class="form-text text-muted">Please enter their First and Last Name.</small>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" name="message" placeholder="Transaction Message">
+                  </div>
+                  <button type="submit" class="btn btn-primary" value = "Go">Submit</button>
+                </fieldset>
+        
+    </form>
+    </div>
+    </body>
+</html>
